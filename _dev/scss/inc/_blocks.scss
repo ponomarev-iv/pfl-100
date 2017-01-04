@@ -6,9 +6,294 @@
   text-align: right;
   font-size: 1.8rem;
 
+  @include respondTo(tablet){
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 1.6rem;
+  }
+
   & a{
     white-space: nowrap;
     text-decoration: none;
     font-size: 3.2rem;
+    color: #fff;
+    line-height: 2;
+    display: block;
+
+    @include respondTo(tablet){
+      text-align: center;
+      line-height: 1.6;
+      font-size: 2rem;
+      display: inline-block;
+    }
+  }
+}
+
+.form{
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid #d8d8d8;
+  padding: 2rem;
+  text-align: left;
+
+  &-row{
+    margin-bottom: 2rem;
+
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+
+    &:after{
+      display: block;
+      clear: both;
+      content: '';
+    }
+  }
+
+  & label{
+    display: block;
+    font-size: 1.6rem;
+    padding-bottom: 3px;
+    line-height: 1.2;
+  }
+
+  & textarea, input{
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #d8d8d8;
+    font-size: 1.6rem;
+    min-height: 3.6rem;
+    padding: .4em;
+    box-sizing: border-box;
+  }
+
+  & button{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-image: linear-gradient(to bottom, #378de5, #004968);
+    padding: .8em;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 6px;
+    letter-spacing: .03em;
+
+    &:hover{
+      background-image: linear-gradient(to bottom, #79bbff, #378de5);
+    }
+  }
+}
+
+.foto{
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 4.5rem 0;
+  text-align: center;
+
+  @include respondTo(mobile){
+    padding-bottom: 2.9rem;
+  }
+
+  & img{
+
+    @include respondTo(mobile){
+      margin-bottom: 1.6rem;
+    }
+  }
+}
+
+.table{
+
+  @include respondTo(small){
+    display: none;
+  }
+
+  & h3{
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+
+.product{
+  padding: 4.5rem 0;
+  background-color: #fff;
+
+  @include respondTo(tablet){
+    padding: 3rem 0;
+  }
+
+  & h3{
+    text-align: center;
+    font-size: 3rem;
+    font-style: italic;
+    margin-bottom: 1.5em;
+  }
+
+  &__title{
+    text-align: center;
+    color: #004968;
+    font-size: 1.8rem;
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+
+    @include respondTo(tablet){
+      font-size: 1.6rem;
+      margin-bottom: 1em;
+    }
+
+    @include respondTo(mobile){
+      font-size: 1.4rem;
+      margin-bottom: .5em;
+    }
+  }
+
+  &__txt{
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-bottom: .75em;
+    min-height: 100px;
+
+    @include respondTo(tablet){
+      font-size: 1.3rem;
+      min-height: 85px;
+      text-align: center;
+      margin: 0 auto 1em;
+    }
+
+    @include respondTo(mobile){
+      min-height: 0;
+      width: 80%;
+    }
+
+    @include respondTo(small){
+      width: 100%;
+    }
+  }
+
+  &__img{
+    display: block;
+    margin: 0 auto 3rem;
+  }
+}
+
+.garant{
+  position: relative;
+  background-color: #e2e2e2;
+  padding: 2.5rem 0;
+
+  &:before{
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 11px;
+    width: 100%;
+    background: url('../img/bg-garant.jpg') repeat-x scroll transparent;
+  }
+
+  &__wrap{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+
+    @include respondTo(tablet){
+      width: 100%;
+    }
+  }
+
+  &__title,
+  &__txt{
+    padding-left: 150px;
+
+    @include respondTo(small){
+      padding-left: 120px;
+    }
+  }
+
+  &__title{
+    font-size: 3.6rem;
+    color: #a52a2a;
+    margin-top: 0;
+
+    @include respondTo(mobile){
+      font-size: 2.6rem;
+    }
+
+    @include respondTo(small){
+      font-size: 1.8rem;
+    }
+  }
+
+  &__txt{
+    font-size: 2.4rem;
+    color: #000;
+    margin: 0;
+
+    @include respondTo(mobile){
+      font-size: 1.8rem;
+    }
+
+    @include respondTo(small){
+      font-size: 1.4rem;
+    }
+  }
+
+  &__img{
+    position: absolute;
+    left: 0;
+    bottom: -6rem;
+  }
+}
+
+.content{
+  background-color: #fff;
+  padding: 4rem 0;
+
+  & h3{
+    font-size: 3.2rem;
+    font-style: italic;
+
+    @include respondTo(mobile){
+      font-size: 2.6rem;
+    }
+
+    @include respondTo(small){
+      font-size: 2rem;
+    }
+  }
+
+  & h4{
+    font-size: 2.6rem;
+
+    @include respondTo(mobile){
+      font-size: 2rem;
+    }
+
+    @include respondTo(small){
+      font-size: 1.8rem;
+    }
+  }
+
+  & ul{
+    margin: 2rem 1rem;
+    list-style: none;
+  }
+
+  & li{
+    padding-left: .7em;
+    position: relative;
+    font-size: 1.6rem;
+    margin-bottom: .5em;
+
+    &:before{
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      width: 3px;
+      height: 3px;
+      left: 0;
+      top: calc(50% - 1px);
+      background-color: #333;
+    }
   }
 }

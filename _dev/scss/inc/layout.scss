@@ -10,12 +10,53 @@ body{
   font-family: Helvetica, Arial, sans-serif;
   background-color: #fafafa;
   color: #333333;
+  min-width: 320px;
 }
 
-header{
+.header{
+   background-image: linear-gradient(to bottom, #225681, #004968);
+   border-bottom: 4px solid #a52a2a;
+   padding: 3.6rem 0;
+   color: #fff;
+ }
+
+.footer{
   background-image: linear-gradient(to bottom, #225681, #004968);
-  border-bottom: 3px solid #ff0000;
-  padding: 3.6rem 0;
+  padding: 4rem 0 2.5rem;
   color: #fff;
+
+  @include respondTo(tablet){
+    text-align: center;
+  }
+
+  & h3{
+    font-weight: 400;
+    margin: 0;
+    font-size: 2.2rem;
+  }
+
+  & h4{
+    font-weight: 600;
+    font-size: 2.4rem;
+    margin: .5em 0;
+  }
+
+  &__addres{
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+}
+
+.aside{
+  text-align: center;
+
+  @include respondTo(mobile){
+    margin-top: 3.6rem;
+    text-align: left;
+  }
+}
+
+img{
+  max-width: 100%;
 }
 
