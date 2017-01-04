@@ -1,0 +1,14 @@
+/**
+ * Created by Pompo on 04.01.2017.
+ */
+
+.phone{
+  text-align: right;
+  font-size: 1.8rem;
+
+  & a{
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 3.2rem;
+  }
+}
